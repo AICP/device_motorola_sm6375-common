@@ -316,6 +316,9 @@ on boot
    chown system system /sys/class/capsense/reset
    chown system system /sys/class/capsense/int_state
 
+on property:sys.boot_completed=1
+    restart vendor.qcrild
+
 on late-fs-charger
     class_start early_hal
     wait_for_prop hwservicemanager.ready true
