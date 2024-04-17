@@ -1,0 +1,14 @@
+[
+  {
+    "repository": AICP/kernel_motorola_sm6375",
+    "target_path": "kernel/motorola/sm6375",
+  },
+  {
+    "repository": "AICP/hardware_motorola",
+    "target_path": "hardware/motorola"
+  },
+  {
+    "repository": "AICP/system_qcom",
+    "target_path": "system/qcom"
+  }
+]
