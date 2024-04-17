@@ -330,6 +330,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
 
+# RILD
+PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.0.vendor
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
