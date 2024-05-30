@@ -107,7 +107,8 @@ PRODUCT_PACKAGES += \
     libhfp \
     libsndmonitor \
     libspkrprot \
-    sound_trigger.primary.holi
+    sound_trigger.primary.holi \
+    tinymix
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
