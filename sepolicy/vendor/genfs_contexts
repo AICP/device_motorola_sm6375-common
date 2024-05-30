@@ -5,6 +5,9 @@ genfscon sysfs /devices/platform/egis_input/navigation_event        u:object_r:v
 
 # Health
 genfscon sysfs /devices/platform/soc/soc:mmi,charger/power_supply/mmi_battery      u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/4c88000.i2c/i2c-2/2-003b/power_supply        u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/4c88000.i2c/i2c-2/2-0055/power_supply        u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/4a88000.i2c/i2c-0/0-0030/power_supply        u:object_r:vendor_sysfs_battery_supply:s0
 
 # Input Devices
 genfscon sysfs /devices/virtual/input                                           u:object_r:vendor_sysfs_input:s0
