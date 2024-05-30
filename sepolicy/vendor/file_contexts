@@ -61,6 +61,9 @@
 /dev/goodix_fp                                          u:object_r:goodix_device:s0
 /sys/devices/soc/0.et320(/.*)?                          u:object_r:vendor_sysfs_fingerprint:s0
 
+# Health
+/sys/devices/platform/soc/4c88000.i2c/i2c-2/2-003b/power_supply/charger(/.*)?          u:object_r:vendor_sysfs_battery_supply:s0
+
 # IFAA
 /(vendor|system/vendor)/bin/hw/vendor\.zui\.hardware\.ifaa@1\.0-service                 u:object_r:hal_ifaa_default_exec:s0
 
