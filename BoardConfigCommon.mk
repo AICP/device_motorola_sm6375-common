@@ -66,8 +66,12 @@ AB_OTA_PARTITIONS += \
     system_ext \
     vbmeta \
     vbmeta_system \
-    vendor \
+    vendor
+
+ifeq ($(TARGET_IS_VAB),true)
+AB_OTA_PARTITIONS += \
     vendor_boot
+endif
 
 # Audio
 AUDIO_FEATURE_ENABLED_AHAL_EXT := false
