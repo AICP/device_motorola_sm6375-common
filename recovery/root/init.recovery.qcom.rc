@@ -27,6 +27,32 @@
 
 import init.recovery.${ro.boot.device}.rc
 
+on early-init
+    insmod /lib/modules/exfat.ko
+    insmod /lib/modules/aw862x.ko
+    insmod /lib/modules/wl2864c.ko
+    insmod /lib/modules/wl2868c.ko
+    insmod /lib/modules/mmi_sys_temp.ko
+    insmod /lib/modules/mmi_annotate.ko
+    insmod /lib/modules/mmi_info.ko
+    insmod /lib/modules/mm8013c_fg_mmi.ko
+    insmod /lib/modules/adapter_class.ko
+    insmod /lib/modules/mmi_charger.ko
+    insmod /lib/modules/mmi_discrete_charger_class.ko
+    insmod /lib/modules/sgm4154x_charger.ko
+    insmod /lib/modules/bq2589x_charger.ko
+    insmod /lib/modules/mmi_discrete_charger.ko
+    insmod /lib/modules/qpnp_adaptive_charge.ko
+    insmod /lib/modules/moto_f_usbnet.ko
+    insmod /lib/modules/tcpc_class.ko
+    insmod /lib/modules/tcpc_rt1711h.ko
+    insmod /lib/modules/rt_pd_manager.ko
+    insmod /lib/modules/mmi_relay.ko
+    insmod /lib/modules/sensors_class.ko
+    insmod /lib/modules/touchscreen_mmi.ko
+    insmod /lib/modules/goodix_brl_mmi.ko
+
+
 on init
     setprop sys.usb.configfs 1
 
