@@ -66,8 +66,12 @@ AB_OTA_PARTITIONS += \
     system_ext \
     vbmeta \
     vbmeta_system \
-    vendor \
+    vendor
+
+ifneq ($(TARGET_NOT_USE_VENDOR_BOOT),true)
+AB_OTA_PARTITIONS += \
     vendor_boot
+endif
 
 # Audio
 AUDIO_FEATURE_ENABLED_AHAL_EXT := false
@@ -150,7 +154,7 @@ TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 
 # Recovery
-ifeq ($(TARGET_IS_VAB),true)
+ifneq ($(TARGET_NOT_USE_VENDOR_BOOT),true)
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 else
 BOARD_USES_RECOVERY_AS_BOOT := true
