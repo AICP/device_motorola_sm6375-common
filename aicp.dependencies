@@ -6,6 +6,6 @@
   {
     "repository": "LineageOS/android_system_qcom",
     "target_path": "system/qcom",
-    "branch": "lineage-20"
+    "branch": "lineage-21"
   }
 ]
