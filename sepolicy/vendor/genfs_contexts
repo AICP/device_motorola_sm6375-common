@@ -7,7 +7,7 @@ genfscon sysfs /devices/platform/egis_input/navigation_event        u:object_r:v
 genfscon sysfs /devices/platform/soc/4804000.ufshc/host0/target0:0:0/0:0:0:4/block/sde/queue    u:object_r:vendor_sysfs_sde_queue:s0
 
 # Health
-genfscon sysfs /devices/platform/soc/soc:mmi,charger/power_supply/mmi_battery      u:object_r:vendor_sysfs_battery_supply:s0
+#genfscon sysfs /devices/platform/soc/soc:mmi,charger/power_supply/mmi_battery      u:object_r:vendor_sysfs_battery_supply:s0
 
 # Input Devices
 genfscon sysfs /devices/virtual/input                                           u:object_r:vendor_sysfs_input:s0
