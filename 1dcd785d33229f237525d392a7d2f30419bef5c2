@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1340e36_509a0aa4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1416
+      },
+      "writtenOn": "2024-07-01T04:55:31Z",
+      "side": 1,
+      "message": "Try https://review.lineageos.org/c/LineageOS/android_device_xiaomi_sm8250-common/+/380331\n\nSpecifically, importing the makefile from qcom vibrator",
+      "revId": "1dcd785d33229f237525d392a7d2f30419bef5c2",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
