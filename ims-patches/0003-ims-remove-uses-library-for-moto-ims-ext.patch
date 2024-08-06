@@ -1,0 +1,30 @@
+From 32bcecb405115dcb39fa866dcd4d11e59c330c1a Mon Sep 17 00:00:00 2001
+From: Andrew Hexen <SyberHexen@gmail.com>
+Date: Thu, 24 Oct 2024 19:40:41 -0300
+Subject: [PATCH 3/4] ims: remove uses-library for moto-ims-ext
+
+* This was added in 13 which breaks ims:
+'java.lang.ClassNotFoundException org/codeaurora/ims/utils/QtiCarrierConfigHelper/ImsService.java'
+---
+ AndroidManifest.xml | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/AndroidManifest.xml b/AndroidManifest.xml
+index e13cea6..788fde8 100644
+--- a/AndroidManifest.xml
++++ b/AndroidManifest.xml
+@@ -47,9 +47,8 @@
+         </service>
+         <service android:enabled="true" android:exported="true" android:name=".QtiImsExtService" android:permission="com.qti.permission.BIND_QTI_IMS_SERVICE" android:singleUser="true"/>
+         <uses-library android:name="moto-telephony"/>
+-        <uses-library android:name="moto-ims-ext"/>
+         <uses-library android:name="qti-telephony-hidl-wrapper"/>
+         <uses-library android:name="qti-telephony-utils"/>
+         <uses-library android:name="ims-ext-common"/>
+     </application>
+-</manifest>
+\ No newline at end of file
++</manifest>
+-- 
+2.47.0
+
