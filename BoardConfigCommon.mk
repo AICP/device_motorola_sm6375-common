@@ -170,6 +170,8 @@ ENABLE_VENDOR_RIL_SERVICE := true
 BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/fsg:/fsg
 
+SPOOF_FIRST_API_LEVEL_32 := true
+
 # SELinux
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true

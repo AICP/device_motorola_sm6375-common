@@ -7,5 +7,10 @@
     "repository": "LineageOS/android_system_qcom",
     "target_path": "system/qcom",
     "branch": "lineage-21"
+  },
+  {
+    "repository": "Evolution-X/vendor_certification",
+    "target_path": "vendor/certification",
+    "branch": "udc"
   }
 ]
