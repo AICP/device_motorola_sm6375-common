@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from fogos_g-user 14 U1UG34.23-28-2 8dca85 release-keys.
+# All unpinned blobs below are extracted from miami_g-user U1SSMS34.31-64-4-4-da12fc release-keys
 
 # ADSP
 vendor/bin/adsprpcd
@@ -539,6 +539,9 @@ vendor/lib/libqcodec2_utils.so
 vendor/lib/libqcodec2_v4l2codec.so
 vendor/lib64/libmmosal.so
 
+# Nfc
+-system_ext/app/NQNfcNci/NQNfcNci.apk
+
 # Media - configs
 vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_blair.xml
@@ -899,8 +902,8 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 
 # Ril - IMS (APK)
-system/etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-telephony.xml
-system/framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar
+system_ext/etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-telephony.xml
+system_ext/framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar
 
 # Radio - IMS (APK) - from bangkk patched
 -system_ext/priv-app/ims/ims.apk|25e2143c555eefa20eecde03b44ae81cd0eaed9b
@@ -922,6 +925,8 @@ system_ext/framework/vendor.qti.ims.rcssip-V1.2-java.jar
 system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar
 system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar
+system_ext/lib/vendor.qti.ImsRtpService-V1-ndk.so
+system_ext/lib/vendor.qti.qspmhal-V1-ndk.so
 system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
@@ -993,7 +998,6 @@ vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
-vendor/etc/init/init.vendor.sensors.rc
 vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
 vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
