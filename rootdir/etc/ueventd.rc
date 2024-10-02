@@ -534,3 +534,18 @@ firmware_directories /vendor/firmware_mnt/image/
 /sys/class/fingerprint/fpc1020 irq_cnt    0440     system    system
 /sys/class/fingerprint/fpc1020 dev_enable 0220     system    system
 /sys/class/fingerprint/fpc1020 vendor     0444     system    system
+
+# wakeup nodes
+/sys/devices/virtual/wakeup/wakeup* active_count 0660 system system
+/sys/devices/virtual/wakeup/wakeup* active_time_ms 0660 system system
+/sys/devices/virtual/wakeup/wakeup* event_count 0660 system system
+/sys/devices/virtual/wakeup/wakeup* expire_count 0660 system system
+/sys/devices/virtual/wakeup/wakeup* last_change_ms 0660 system system
+/sys/devices/virtual/wakeup/wakeup* max_time_ms 0660 system system
+/sys/devices/virtual/wakeup/wakeup* name 0660 system system
+/sys/devices/virtual/wakeup/wakeup* prevent_suspend_time_ms 0660 system system
+/sys/devices/virtual/wakeup/wakeup* subsystem 0660 system system
+/sys/devices/virtual/wakeup/wakeup* total_time_ms 0660 system system
+/sys/devices/virtual/wakeup/wakeup* uevent 0660 system system
+/sys/devices/virtual/wakeup/wakeup* waiting_for_supplier 0660 system system
+/sys/devices/virtual/wakeup/wakeup* wakeup_count 0660 system system
