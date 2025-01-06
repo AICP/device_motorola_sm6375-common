@@ -17,12 +17,26 @@ if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
 ANDROID_ROOT="${MY_DIR}/../../.."
 
+export TARGET_ENABLE_CHECKELF=true
+
 HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
 fi
 source "${HELPER}"
+
+function vendor_imports() {
+    cat <<EOF >>"$1"
+                "device/motorola/sm6375-common",
+                "hardware/qcom-caf/sm8350",
+                "hardware/qcom-caf/wlan",
+                "vendor/qcom/opensource/commonsys-intf/display",
+                "vendor/qcom/opensource/commonsys/display",
+                "vendor/qcom/opensource/dataservices",
+                "vendor/qcom/opensource/display",
+EOF
+}
 
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}"
