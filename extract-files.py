@@ -39,19 +39,13 @@ lib_fixups: lib_fixups_user_type = {
         'com.qualcomm.qti.dpm.api@1.0',
         'libmmosal',
         'vendor.qti.diaghal@1.0',
-        'vendor.qti.hardware.fm@1.0',
         'vendor.qti.hardware.qccsyshal@1.0',
-        'vendor.qti.hardware.qccvndhal@1.0',
         'vendor.qti.hardware.wifidisplaysession@1.0',
         'vendor.qti.imsrtpservice@3.0',
         'vendor.qti.qspmhal@1.0',
     ): lib_fixup_vendor_suffix,
     (
-        'libofflinelog',
-        'libOmxCore',
         'libqsap_sdk',
-        'libril',
-        'libthermalclient',
         'libwpa_client',
     ): lib_fixup_remove,
 }
@@ -61,17 +55,21 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('/system/', '/system_ext/'),
     'system_ext/priv-app/ims/ims.apk': blob_fixup()
         .apktool_patch('ims-patches'),
-    'vendor/lib64/libwvhidl.so': blob_fixup()
-        .add_needed('libcrypto_shim.so'),
+    'system_ext/lib64/libwfdnative.so': blob_fixup()
+        .remove_needed('android.hidl.base@1.0.so'),
+    ('system_ext/lib/libwfdservice.so', 'system_ext/lib64/libwfdservice.so'): blob_fixup()
+        .replace_needed('android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V4-cpp.so'),
     ('system_ext/lib/libwfdmmsrc_system.so', 'system_ext/lib64/libwfdmmsrc_system.so'): blob_fixup()
         .add_needed('libgui_shim.so'),
+    'vendor/lib64/libwvhidl.so': blob_fixup()
+        .add_needed('libcrypto_shim.so'),
     'system_ext/lib64/libwfdnative.so': blob_fixup()
         .add_needed('libbinder_shim.so')
         .add_needed('libinput_shim.so'),
-    ('system_ext/lib/libwfdservice.so', 'system_ext/lib64/libwfdservice.so'): blob_fixup()
-        .replace_needed('android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V4-cpp.so'),
     'vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml': blob_fixup()
         .regex_replace('IComponentStore/default9', 'IComponentStore/default'),
+    'vendor/etc/media_codecs.xml': blob_fixup()
+        .regex_replace('.*media_codecs_(google_audio|google_c2|google_telephony|google_video|vendor_audio).*\n', ''),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
