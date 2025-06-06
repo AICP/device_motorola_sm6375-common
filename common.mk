@@ -33,6 +33,7 @@ PRODUCT_PACKAGES += \
     FrameworksResProduct \
     FrameworksResTarget \
     NcmTetheringOverlay \
+    SettingsProviderResCommon \
     SystemUIResCommon \
     TelephonyResCommon \
     TelephonyResProduct \
