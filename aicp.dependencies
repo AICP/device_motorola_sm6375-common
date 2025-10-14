@@ -1,0 +1,12 @@
+[
+  {
+    "repository": "LineageOS/android_kernel_motorola_sm6375",
+    "target_path": "kernel/motorola/sm6375",
+    "branch":      "lineage-23.0"
+  },
+  {
+    "repository": "LineageOS/android_hardware_motorola",
+    "target_path": "hardware/motorola",
+    "branch":      "lineage-23.0"
+  }
+]
