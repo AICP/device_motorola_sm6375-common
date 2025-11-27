@@ -1,6 +1,3 @@
-# Charger
-ro.charger.enable_suspend=1
-
 # IMS
 ro.qcom.ims.use_moto_vt_ext=true
 

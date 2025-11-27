@@ -47,7 +47,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_NO_GCC := true
 TARGET_KERNEL_SOURCE := kernel/motorola/sm6375
-TARGET_KERNEL_CONFIG := vendor/holi-qgki_defconfig vendor/debugfs.config vendor/ext_config/lineage_moto-holi.config
+TARGET_KERNEL_CONFIG := vendor/holi-qgki_defconfig vendor/ext_config/lineage_moto-holi.config
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
