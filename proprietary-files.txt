@@ -1,4 +1,4 @@
-# All unpinned blobs are extracted from fogos_g V1UGS35H.75-14-3-6
+# All unpinned blobs are extracted from fogos_g V1UGS35H.75-14-3-7
 
 # ADSP
 vendor/bin/adsprpcd
@@ -284,6 +284,11 @@ vendor/lib64/vendor.qti.gnss@2.1.so
 vendor/lib64/vendor.qti.gnss@3.0.so
 vendor/lib64/vendor.qti.gnss@4.0-service.so
 vendor/lib64/vendor.qti.gnss@4.0.so
+
+# GNSS configs
+vendor/etc/lowi.conf
+vendor/etc/sap.conf
+vendor/etc/xtwifi.conf
 
 # Graphics - Adreno
 vendor/lib/egl/eglSubDriverAndroid.so
